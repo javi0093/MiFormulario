@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mi Formulario</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Telefono</string>
+    <string name="email">Email</string>
+    <string name="Descripcion_contacto">Descripción Contacto</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="fecha">Fecha de Nacimiento</string>
+    <string name="pnombre">Javier Gorgoroso</string>
+    <string name="pfecha">Fecha Nacimiento: 09/07/1993</string>
+    <string name="ptelefono">Tel: 55553333</string>
+    <string name="pemail">maiulfalso@gmaiul.com</string>
+    <string name="pdescripcion">Conocí a Lorena en el Restaurante de comida italiana</string>
+    <string name="boton_editar">Editar Datos</string>
+    <string name="confirmar">Confirmar datos</string>
+</resources>

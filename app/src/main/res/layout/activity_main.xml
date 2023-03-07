@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="@dimen/margen_activity"
+    android:paddingLeft="@dimen/margen_activity"
+    android:paddingRight="@dimen/margen_activity"
+    android:paddingBottom="@dimen/margen_activity"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/dpFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:headerBackground="@color/acento"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:inputType="textUri"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/llContenedorFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etNombre"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etfecha"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:inputType="date"
+            android:hint="@string/fecha"/>
+
+        <ImageButton
+            android:id="@+id/imgbtnFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_today"
+            />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefono"
+        android:inputType="textUri"
+        android:layout_below="@id/dpFecha"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="textUri"
+        android:layout_below="@id/etTelefono"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Descripcion_contacto"
+        android:inputType="textUri"
+        android:layout_below="@id/etEmail"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/siguiente"
+        android:layout_below="@id/etDescripcion"
+        android:backgroundTint="@color/acento"
+        />
+
+</LinearLayout>
