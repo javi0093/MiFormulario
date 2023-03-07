@@ -13,4 +13,5 @@
     <string name="pdescripcion">Conocí a Lorena en el Restaurante de comida italiana</string>
     <string name="boton_editar">Editar Datos</string>
     <string name="confirmar">Confirmar datos</string>
+    <string name="btn_aceptar">Aceptar</string>
 </resources>

@@ -11,12 +11,7 @@
     android:paddingBottom="@dimen/margen_activity"
     android:orientation="vertical">
 
-    <DatePicker
-        android:id="@+id/dpFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:headerBackground="@color/acento"
-        android:visibility="gone" />
+
 
     <EditText
         android:id="@+id/etNombre"
@@ -26,29 +21,36 @@
         android:inputType="textUri"
         tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:id="@+id/llContenedorFecha"
+
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:clickable="true"
+        android:hint="@string/fecha"
+        android:layout_below="@id/etNombre"
+        />
+
+    <DatePicker
+        android:id="@+id/dpFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etNombre"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/etfecha"
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:inputType="date"
-            android:hint="@string/fecha"/>
-
-        <ImageButton
-            android:id="@+id/imgbtnFecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_today"
-            />
-
-
-    </LinearLayout>
+        android:headerBackground="@color/acento"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_below="@id/etFecha"
+        />
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/btn_aceptar"
+        android:layout_below="@id/dpFecha"
+        android:textColor="@color/white"
+        />
 
     <EditText
         android:id="@+id/etTelefono"
@@ -56,7 +58,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/telefono"
         android:inputType="textUri"
-        android:layout_below="@id/dpFecha"
+        android:layout_below="@id/btnAceptar"
         tools:ignore="MissingConstraints" />
     <EditText
         android:id="@+id/etEmail"

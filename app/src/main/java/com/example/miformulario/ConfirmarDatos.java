@@ -41,11 +41,11 @@ public class ConfirmarDatos extends AppCompatActivity {
         tvEmail= (TextView)findViewById(R.id.tvEmail);
         tvDescripcion= (TextView)findViewById(R.id.tvDescripcion);
 
-        tvNombre.setText(nombre_recibido);
-        tvFecha.setText(fecha_recibido);
-        tvTelefono.setText(telefono_recibido);
-        tvEmail.setText(email_recibido);
-        tvDescripcion.setText(descripcion_recibido);
+        tvNombre.setText("Nombre: " + nombre_recibido);
+        tvFecha.setText("Fecha de Nacimiento: " + fecha_recibido);
+        tvTelefono.setText("Tel: "+telefono_recibido);
+        tvEmail.setText("Email: "+email_recibido);
+        tvDescripcion.setText("Descripción del contacto: "+descripcion_recibido);
 
 
 

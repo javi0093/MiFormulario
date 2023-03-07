@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText etFecha;
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText etTelefono;
     private EditText etDescripcion;
 
+    private Button btnAceptar;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +45,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         etNombre= (EditText) findViewById(R.id.etNombre);
-        etFecha= findViewById(R.id.etfecha);
+        etFecha= findViewById(R.id.etFecha);
         etTelefono = findViewById(R.id.etTelefono);
-        imgbtnFecha = findViewById(R.id.imgbtnFecha);
+        //imgbtnFecha = findViewById(R.id.imgbtnFecha);
         etEmail = findViewById(R.id.etEmail);
         dpFecha= findViewById(R.id.dpFecha);
         etDescripcion = findViewById(R.id.etDescripcion);
         btnSiguiente = findViewById(R.id.btnSiguiente);
+        btnAceptar = findViewById(R.id.btnAceptar);
 
 
-        MaterialDatePicker.Builder materialDateBuilder = MaterialDatePicker.Builder.datePicker();
+
+        //esto es por si quiero cambiar el formato del calendario a uno en el que aparezca el calendario al apretar un botón
+
+
+       /* MaterialDatePicker.Builder materialDateBuilder = MaterialDatePicker.Builder.datePicker();
         materialDateBuilder.setTitleText("Seleccione una fecha");
         final MaterialDatePicker materialDatePicker = materialDateBuilder.build();
         imgbtnFecha.setOnClickListener(new View.OnClickListener() {
@@ -63,12 +75,28 @@ public class MainActivity extends AppCompatActivity {
             public void onPositiveButtonClick(Object selection) {
                 etFecha.setText(materialDatePicker.getHeaderText());
             }
+        });*/
+
+
+
+        btnAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                StringBuilder fechaElegida = new StringBuilder();
+                int mes = dpFecha.getMonth() + 1;
+                fechaElegida.append(dpFecha.getDayOfMonth() + "/" + mes + "/" + dpFecha.getYear() );
+                fechaElegida.toString();
+                etFecha.setText(fechaElegida);
+
+            }
         });
+
 
 
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(MainActivity.this, ConfirmarDatos.class);
                 intent.putExtra("nombre_ingresado", etNombre.getText().toString());
                 intent.putExtra("fecha_ingresado", etFecha.getText().toString());
